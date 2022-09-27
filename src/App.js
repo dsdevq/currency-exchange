@@ -25,7 +25,7 @@ function App() {
 			calculations("UAH", "USD", 1).then((usd) => {
 				document.getElementById("usd").innerText = usd
 			})
-			return () => (effectRan.current = true)
+			effectRan.current = true
 		}
 		if (amountFrom)
 			calculations(to, from, fromAmount).then((d) => setToAmount(d))
